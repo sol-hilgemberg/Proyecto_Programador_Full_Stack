@@ -9,5 +9,5 @@ https://trello.com/b/cUbf428p/smart-fit-g15
 
 Integrantes, video explicativo y más información en la Wiki del proyecto!
 
-Pagina del grupo 105 en Wordpress: http://34.151.237.246
+
 
