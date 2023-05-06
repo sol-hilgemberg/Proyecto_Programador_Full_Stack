@@ -1,11 +1,12 @@
 # Proyecto_Programador_Full_Stack
-Repositorio del Proyecto de la asignatura Programandor Full Stack del ISPC TSDWAD-2022
+Repositorio del Proyecto de la asignatura Programandor Web del ISPC Cohorte 2022
 
-Para continuar con el proyecto hay que leer y seguir la siguiente guia
-https://docs.google.com/document/d/1oWo5-h16jsunkRrOdoeIfQS_TXcD0UZbZHyWB7kiGkA/edit#
+"Este proyecto tiene como objetivo entrenar sus habilidades en la creación de una aplicación/sitio Web completa (SPA con Angular, consumo de API y POO con Django-Python) y reflejar la realidad de los desafíos técnicos para el puesto de desarrollador FullStack. 
 
-Link del trello
-https://trello.com/b/cUbf428p/smart-fit-g15
+Con este proyecto podrás entrenar tu lógica, organización de proyectos, mejores prácticas y los conceptos adquiridos durante tu recorrido en el cursado del módulo."
+
+Proyecto: E-Commerce SmartFIT
+
 
 Integrantes, video explicativo y más información en la Wiki del proyecto!
 
