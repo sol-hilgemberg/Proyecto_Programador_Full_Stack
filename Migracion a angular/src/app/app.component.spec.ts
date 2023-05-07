@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'SmartFit'`, () => {
+  it(`should have as title 'AngularProject'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('SmartFit');
+    expect(app.title).toEqual('AngularProject');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('SmartFit app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('AngularProject app is running!');
   });
 });

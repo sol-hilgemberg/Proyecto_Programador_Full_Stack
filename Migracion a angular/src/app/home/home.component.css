@@ -1,0 +1,37 @@
+
+  .inicio {
+    background-image: url('../../assets/images/inicio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    width: 100%;
+    min-height: 90vh;
+    padding: 280px 0 220px;
+  }
+  
+  .inicio span, h3 {
+    color: white;
+    font-size: 5rem;
+    padding-left: 10%;
+  }
+  
+  .inicio a {
+    margin-left: 10%;
+    transition: .2s ease-in-out 0s;
+  }
+  
+  .copyright {
+    position: relative;
+    bottom: 0;
+    width: 100%;;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    background: #111;
+    line-height: 1.5;
+  }
+
+  .inicio a:hover {
+    transform: scale(1);
+  }

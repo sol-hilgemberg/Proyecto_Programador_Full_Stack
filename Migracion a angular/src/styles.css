@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/navbar/navbar.component.css";
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,65 +9,23 @@
     outline: none;
     border: none;
   }
-
+  
   html {
     font-size: 62.5%;
     overflow-x: hidden;
     background: #000;
-    min-height: 100vh;
   }
   
   body {
     background: #000;
-    margin: 0;
-    position: relative;
-    padding-bottom: 2.5em;
-    display:grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
-    min-height: 100vh;
   }
-
+  
   section {
     padding: 5rem 9%;
   }
-  
-  .texto {
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-  }
-  
-  .texto span {
-    font-size: 3rem;
-    color: #FFFB00;
-    background: #000;
-    padding: .5rem 1.5rem;
-    border: 0.1rem solid #aaa;
-    border-radius: .5rem;
-  }
-  
-  .boton {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    display: inline-block;
-    padding: 1rem 2.9rem;
-    padding-right: 3rem;
-    background: linear-gradient( #FFFB00 100%, transparent 90%);
-    color: #000;
-    cursor: pointer;
-    font-size: 1.7rem;
-    text-decoration: none;
-  }
-  
-  .boton:hover {
-    font-size: 2rem;
-    color: #000;
-  }
-  
 
-  
-@media (max-width: 992px) {
+   
+  @media (max-width: 992px) {
     body {
       font-size: 20%;
     }
@@ -82,10 +42,6 @@
     .plan.premium {
       margin: 1rem;
     }
-  
-    .contenedor .caja {
-      padding-bottom: 5rem;
-    }
   }
   
   /* tablets / celulares */
@@ -100,12 +56,12 @@
     }
     
     .contenedor {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      }
   }
   
   /* celulares */
@@ -122,4 +78,3 @@
       text-align: center;
     }
   } 
-  
