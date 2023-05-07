@@ -23,3 +23,58 @@
   section {
     padding: 5rem 9%;
   }
+
+   
+  @media (max-width: 992px) {
+    body {
+      font-size: 20%;
+    }
+  
+    .inicio, .about-contenedor, .contenedor {
+      display: block;
+      text-align: center;
+    }
+  
+    .plan.basic {
+      margin: 1rem;
+    }
+  
+    .plan.premium {
+      margin: 1rem;
+    }
+  }
+  
+  /* tablets / celulares */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    nav {
+      padding: 10px 0px;
+    }
+    
+    .contenedor {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      }
+  }
+  
+  /* celulares */
+  @media (max-width: 576px) {
+    html {
+      font-size: 65%;
+    }
+    
+    .inicio span, h3 {
+      font-size: 19px;
+    }
+  
+    .about-contenedor, .contenedor {
+      text-align: center;
+    }
+  } 

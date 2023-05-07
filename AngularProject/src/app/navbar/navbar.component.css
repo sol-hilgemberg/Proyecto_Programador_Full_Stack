@@ -1,27 +1,4 @@
 
-* {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  outline: none;
-  border: none;
-}
-
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  background: #000;
-}
-
-body {
-  background: #000;
-}
-
-section {
-  padding: 5rem 9%;
-}
-
 .texto {
   text-align: center;
   margin-bottom: 3rem;
