@@ -1,4 +1,5 @@
-
+@import '../footer/footer.component.css';
+  
   .inicio {
     background-image: url('../../assets/images/inicio.jpg');
     background-repeat: no-repeat;

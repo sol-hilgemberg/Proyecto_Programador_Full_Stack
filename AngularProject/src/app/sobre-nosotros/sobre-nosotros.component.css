@@ -1,3 +1,5 @@
+@import '../footer/footer.component.css';  
+
   .boton {
     margin-top: 1rem;
     display: inline-block;
@@ -70,16 +72,5 @@
     grid-row-gap: 0px;
   }
   
-  .copyright {
-    position: relative;
-    bottom: 0;
-    width: 100%;;
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem;
-    color: #fff;
-    background: #111;
-    line-height: 1.5;
-  }
   
  

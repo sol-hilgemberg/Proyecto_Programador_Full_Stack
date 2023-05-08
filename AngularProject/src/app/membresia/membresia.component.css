@@ -1,4 +1,5 @@
-  
+@import '../footer/footer.component.css'; 
+
   .contenedor {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -82,16 +83,4 @@
   .membresia .plan .list p i {
     padding-right: 1rem;
     color: #FFFB00;
-  }
-
-  .copyright {
-    position: relative;
-    bottom: 0;
-    width: 100%;;
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem;
-    color: #fff;
-    background: #111;
-    line-height: 1.5;
   }
