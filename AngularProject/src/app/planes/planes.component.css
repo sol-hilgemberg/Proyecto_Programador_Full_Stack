@@ -1,0 +1,55 @@
+@import '../footer/footer.component.css'; 
+ 
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0px;
+  }
+  
+  .planes {
+    background-color: #000;
+  }
+  
+  .planes .contenedor .caja:hover .image img {
+    transform: scale(1.1);
+  }
+  
+  .planes .contenedor .caja .image {
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .planes .contenedor .caja .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .planes .contenedor .caja .content {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .planes .contenedor .caja .content img {
+    height: 9rem;
+    margin-bottom: 1rem;
+    filter: invert(1);
+  }
+  
+  .planes .contenedor .caja .content h3 {
+    font-size: 2rem;
+    color: #FFFB00;
+  }
+  
+  .planes .contenedor .caja .content p {
+    line-height: 2;
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 0;
+  }
+
+ 
