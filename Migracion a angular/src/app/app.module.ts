@@ -9,6 +9,9 @@ import { PlanesComponent } from './planes/planes.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { TiendaComponent } from './tienda/tienda.component';
+import { CardsShopComponent } from './tienda/cards-shop/cards-shop.component';
+import { CarritoComprasComponent } from './tienda/carrito-compras/carrito-compras.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { HomeComponent } from './home/home.component';
     PlanesComponent,
     SobreNosotrosComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    TiendaComponent,
+    CardsShopComponent,
+    CarritoComprasComponent
   ],
   imports: [
     BrowserModule,
