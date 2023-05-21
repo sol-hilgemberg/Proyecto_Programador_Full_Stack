@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+}
+  
+.copyright {
+  position: relative;
+}
