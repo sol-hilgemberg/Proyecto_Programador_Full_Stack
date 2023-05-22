@@ -8,10 +8,10 @@ import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { TiendaComponent } from './tienda/tienda.component'
 
 
 const routes: Routes = [
-  
   {path: '', component: LoginComponent },
   {path: 'login', component: LoginComponent },
   {path: 'inicio', component: HomeComponent },
@@ -19,7 +19,8 @@ const routes: Routes = [
   {path: 'contacto', component: ContactoComponent},
   {path: 'planes', component: PlanesComponent},
   {path: 'membresia', component: MembresiaComponent},
-  {path: 'navbar', component: NavbarComponent },
+  {path: 'navbar', component: NavbarComponent},
+  {path: 'tienda', component: TiendaComponent},
 ];
 
 @NgModule({

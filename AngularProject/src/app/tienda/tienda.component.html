@@ -2,7 +2,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<router-outlet></router-outlet> <!--- Conexion de Routeo  !--->
 <body>
     <div>
         <h2>Productos</h2>
@@ -18,17 +17,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
             <div class="offcanvas-body" style="color: black;"> <!-- Cuerpo del carrito-->
-                <app-carrito-compras></app-carrito-compras>
+                 <app-carrito-compras></app-carrito-compras>
             </div>
     </div>
         </section>
         <section class="container">
             <div class="row">
-                <app-cards-shop></app-cards-shop>
-                <app-cards-shop></app-cards-shop>
-                <app-cards-shop></app-cards-shop>
+              <app-cards-shop></app-cards-shop>
+              <app-cards-shop></app-cards-shop>
+              <app-cards-shop></app-cards-shop>
             </div>
-        </section>     
-        <div class="copyright">Todos los derechos reservados | 2022 © </div>   
+        </section>
     </div>
+    
+<router-outlet></router-outlet> <!--- Conexion de Routeo  !--->
 </body>

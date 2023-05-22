@@ -1,15 +1,15 @@
-<div class="card mb-3" style="max-width: 100%;">
+<div class="card mb-3" style="max-width: 100%;" *ngFor="let producto of productos">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="../assets/images/Barrita de Proteina.jpg" class="img-fluid rounded-start" alt="Barrita Proteica">
+      <img [src]="producto.imagen" class="img-fluid rounded-start" [alt]="producto.alt">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-titulo">Barrita Proteica</h5>
-        <p class="card-text texto">Barrita de de pura proteina con el mejor sabor a manzana verde</p>
-        <p class="card-text precio">$250</p>
+        <h5 class="card-titulo">{{producto.nombre}}</h5>
+        <p class="card-text texto"> {{producto.descripcion}} </p>
+        <p class="card-text precio">$ {{producto.precio}} </p>
       </div>
-      <button type="button" class="btn btn-outline-warning botonCard">Añadir al carrito</button>
+      <button type="button" class="btn btn-outline-warning botonCard" (click)="onClick(producto)">Añadir al carrito</button>
     </div>
   </div>
 </div>
