@@ -25,6 +25,11 @@ export class CarritoService {
     //Añade un producto a la lista del carrito y devuelve la lista actualizada
   anadirNuevoProducto(producto: Producto) {
     this.carritoProductos.push(producto);
-    this._productos.next(this.carritoProductos)
+    this._productos.next(this.carritoProductos);
+  }
+
+  borrarProducto(index: number) {
+    this.carritoProductos.splice(index, 1);
+    this._productos.next(this.carritoProductos);
   }
 }

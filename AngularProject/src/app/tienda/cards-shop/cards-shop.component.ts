@@ -13,22 +13,25 @@ export class CardsShopComponent {
 
   Productos = [
     {
-      imagen: '../../images/Barrita de Proteina.jpg',
-      alt: 'barrita',
-      nombre: 'Barritas Proteicas 1',
+      imagen: 'SmartFit/src/assets/images/Barrita de Proteina.jpg',
+      alt: 'barrita proteicas',
+      nombre: 'Barritas Proteicas',
       descripcion: 'Barritas con gusto a chocolate de 15 gr con mucha proteina',
-      precio: 100,
+      precio: 50,
     },
+
     {
       imagen: '../../images/Mancuernas-8kg.jpg',
       alt: 'Mancuernas de metal',
       nombre: 'Mancuernas',
       descripcion: 'Mancuernas de 8 kg de metal',
       precio: 100,
-    }, {
+    }, 
+    
+    {
       imagen: '../../images/Prroteina en Polvo.jpg',
       alt: 'Proteina',
-      nombre: 'Protein May Whey',
+      nombre: 'Proteina May Whey',
       descripcion: 'Proteina en polvo sabor frutilla de 500 gr',
       precio: 100,
     },
@@ -38,6 +41,10 @@ export class CardsShopComponent {
     private carritoService: CarritoService,
     )  { }
 
+    //async ngOnInit() {
+      //this.productos = (await this.productosService.getAll()).results;
+    //}
+ 
 
   onClick(producto: Producto) {
     this.carritoService.anadirNuevoProducto(producto);

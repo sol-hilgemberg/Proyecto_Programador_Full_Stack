@@ -8,11 +8,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let producto of productos; let indice = index;">
             <th scope="row">1</th>
-            <td>Barrita de Cereal</td>
-            <td>$50</td>
-            <td>15</td>
-        </tr>
+            <td> {{producto.nombre}} </td>
+            <td> {{producto.precio}}  </td>
+            <td> 15 </td>
+            <button type="button" class="btn btn-outline-danger" (click)="onClickBorrar(indice)">Borrar</button>
     </tbody>
 </table>
