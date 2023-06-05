@@ -1,0 +1,29 @@
+@import '../footer/footer.component.css';
+
+
+  .inicio {
+    background-image: url('../../assets/images/inicio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    width: 100%;
+    min-height: 90vh;
+    padding: 280px 0 220px;
+  }
+  
+  .inicio span, h3 {
+    color: white;
+    font-size: 5rem;
+    padding-left: 10%;
+  }
+  
+  .inicio a {
+    margin-left: 10%;
+    transition: .2s ease-in-out 0s;
+  }
+  
+  .inicio a:hover {
+    transform: scale(1);
+  }
+
+ 
