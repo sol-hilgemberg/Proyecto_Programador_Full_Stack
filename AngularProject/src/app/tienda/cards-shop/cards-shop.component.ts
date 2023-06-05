@@ -13,15 +13,15 @@ export class CardsShopComponent {
 
   Productos = [
     {
-      imagen: 'SmartFit/src/assets/images/Barrita de Proteina.jpg',
+      imagen: 'Barrita de Proteina.jpg',
       alt: 'barrita proteicas',
       nombre: 'Barritas Proteicas',
-      descripcion: 'Barritas con gusto a chocolate de 15 gr con mucha proteina',
+      descripcion: 'Barritas con sabor a chocolate de 70 gr con mucha proteina',
       precio: 50,
     },
 
     {
-      imagen: '../../images/Mancuernas-8kg.jpg',
+      imagen: 'Mancuernas-8kg.jpg',
       alt: 'Mancuernas de metal',
       nombre: 'Mancuernas',
       descripcion: 'Mancuernas de 8 kg de metal',
@@ -29,9 +29,9 @@ export class CardsShopComponent {
     }, 
     
     {
-      imagen: '../../images/Prroteina en Polvo.jpg',
+      imagen: 'Prroteina en Polvo.jpg',
       alt: 'Proteina',
-      nombre: 'Proteina May Whey',
+      nombre: 'Proteina Whey Protein',
       descripcion: 'Proteina en polvo sabor frutilla de 500 gr',
       precio: 100,
     },

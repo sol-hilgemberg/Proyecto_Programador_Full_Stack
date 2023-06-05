@@ -37,7 +37,7 @@
 
 .navbar .navbar-brand {
   font-weight: bolder;
-  color: #fff;
+  color: #ffffff;
   font-size: 3rem;
   margin-left: 2%;
 }
@@ -65,7 +65,7 @@
 
 .navbar .navbar-nav .nav-link:hover {
   background: #FFFB00;
-  color: white;
+  color: #000000;
 }
 
 .navbar .dropdown-menu {
@@ -318,7 +318,7 @@
 }
 
 .copyright {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;;
   font-size: 2rem;

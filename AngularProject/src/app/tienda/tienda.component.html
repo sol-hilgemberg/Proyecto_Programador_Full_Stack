@@ -4,12 +4,14 @@
 
 <body>
     <div>
-        <h2>Productos</h2>
-        <section class="container">
-
-            <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                Carrito de Compras
-            </button>
+        <nav class="navbar sticky-top bg-body-tertiary">
+             <div class="container-fluid">
+                <h2>Productos</h2>
+                    <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="--bs-btn-padding-y: .50rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 2rem;">
+                         Carrito de Compras
+                    </button>
+             </div>
+            
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
@@ -19,8 +21,9 @@
             <div class="offcanvas-body" style="color: black;"> <!-- Cuerpo del carrito-->
                  <app-carrito-compras></app-carrito-compras>
             </div>
+    
     </div>
-        </section>
+</nav>
         <section class="container">
             <div class="row">
               <app-cards-shop></app-cards-shop>
