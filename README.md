@@ -6,10 +6,32 @@ Desarrollo Web y Aplicaciones Digitales del ISPC (Cohorte 2022)
 
 Con este proyecto podrás entrenar tu lógica, organización de proyectos, mejores prácticas y los conceptos adquiridos durante tu recorrido en el cursado del módulo."
 
-Proyecto: E-Commerce SmartFIT
+Proyecto: E-Commerce SmartFIT 2023
 
+Instrucciones para ejecutar el proyecto:
 
-Integrantes, video explicativo y más información en la Wiki del proyecto!
+1. Iniciar XAMPP:
+Ejecutar XAMPP en la computadora.
+Iniciar Apache y MySQL.
+Opcionalmente, ingresar a phpMyAdmin para comprobar que la base de datos se esté cargando correctamente (smart_fit es el nombre de la bd).
+
+2. Backend (Django):
+Abrir una terminal en Visual Studio Code (VSCode).
+Navegar hasta la carpeta del backend utilizando el comando cd Backend.
+Ejecutar el siguiente comando: python manage.py runserver.
+Esto iniciará el backend en Django (recuerden tener una maquina virtual).
+
+3. JSON Server: (Dejaremos de usar el json server y utilizaremos una api que envie solicitudes a nuestro backend en Django)
+Abrir otra terminal en VSCode.
+Navegar hasta la raíz del proyecto utilizando el comando cd Proyecto_Programador_Full_Stack.
+Ejecutar el siguiente comando: json-server --watch Backend/db.json.
+Esto iniciará el JSON Server.
+
+4. Frontend (Angular):
+Abrir otra terminal en VSCode.
+Navegar hasta la carpeta del proyecto Angular utilizando el comando cd AngularProject.
+Ejecutar el siguiente comando: ng serve.
+Esto iniciará el proyecto frontend en Angular.
 
 
 
