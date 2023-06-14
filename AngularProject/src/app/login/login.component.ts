@@ -24,6 +24,7 @@ export class LoginComponent {
       .subscribe(result => {
         if (result) {
           // Inicio de sesión exitoso, redireccionar al componente <app-navbar></app-navbar>
+          console.log('Sesión iniciada');
           console.log('Credenciales ingresadas:');
           console.log('Username:', this.username);
           console.log('Password:', this.password);
@@ -34,11 +35,15 @@ export class LoginComponent {
           this.autenticacion.setLoggedIn(false);
           this.loginError = true;
           console.log("Error en las credenciales de usuario");
+          console.log('Username:', this.username);
+          console.log('Password:', this.password);
         }
       }, error => {
         this.loginError = true;
         this.autenticacion.setLoggedIn(false);
         console.log("Error en las credenciales de usuario");
+        console.log('Username:', this.username);
+        console.log('Password:', this.password);
       });
   }
   

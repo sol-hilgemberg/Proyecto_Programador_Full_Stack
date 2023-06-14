@@ -12,7 +12,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http'; // Configuración del módulo y el servicio HTTP
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TiendaComponent } from './tienda/tienda.component';
+import { RegisterComponent } from './register/register.component'; // Configuración del módulo y el servicio HTTP
 
 const routes: Routes = [
   
@@ -34,7 +36,9 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    TiendaComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
