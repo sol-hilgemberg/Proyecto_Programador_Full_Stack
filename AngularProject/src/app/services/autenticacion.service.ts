@@ -7,12 +7,33 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AutenticacionService {
-  private apiUrl = 'http://localhost:3000/users'; // API JSON SERVER de mis usuarios
+  //private apiUrl = 'http://localhost:3000/users'; // API JSON SERVER de mis usuarios
+  private apiUrl = 'http://localhost:8000/api';
   private loggedIn = false;
   private loggedInSubject = new BehaviorSubject<boolean>(false); // Variable de estado 
 
   constructor(private http: HttpClient) { }
 
+  login(username: string, password: string): Observable<boolean> {
+    const data = { usuario: username, contraseña: password };
+    return this.http.post<any>(`${this.apiUrl}/login`, data)
+      .pipe(
+        map(response => {
+          if (response.message === 'Inicio de sesion con exito.') {
+            // Las credenciales son validas, inicia sesión
+            localStorage.setItem('currentUser', JSON.stringify(response.user));
+            this.setLoggedIn(true);
+            return true;
+          } else {
+            // Las credenciales son invalidas
+            return false;
+          }
+        })
+      );
+  }
+  
+  /* 
+  login con json server
   login(username: string, password: string): Observable<boolean> {
     return this.http.get<any>(`${this.apiUrl}?username=${username}&password=${password}`) // Se realiza la llamada a la api y verifica las credenciales
       .pipe(
@@ -28,6 +49,7 @@ export class AutenticacionService {
         })
       );
   }
+  */
 
   logout(): void {
     localStorage.removeItem('currentUser');
@@ -36,20 +58,6 @@ export class AutenticacionService {
   isLoggedIn(): boolean {
     return !!localStorage.getItem('currentUser');
   }
-
-  /*
-  setLoggedIn(value: boolean): void {
-    this.loggedIn = value;
-    console.log(this.loggedIn);
-  }
-  */
-
-  /*
-  getLoggedIn(): boolean {
-    return this.loggedIn;
-  }
-  */
-
   setLoggedIn(value: boolean) {
     this.loggedInSubject.next(value); // Actualiza el estado de inicio de sesión
   }
@@ -57,5 +65,4 @@ export class AutenticacionService {
   getLoggedIn() {
     return this.loggedInSubject.asObservable(); // Retorna el Observable del estado de inicio de sesión
   }
-  
 }
