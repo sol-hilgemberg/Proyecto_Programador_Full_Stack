@@ -19,7 +19,6 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#" routerLink="/inicio" routerLinkActive="active" >Inicio</a>
-                <a class="nav-link active" aria-current="page" href="#" routerLink="/inicio" routerLinkActive="active" >Inicio</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,27 +36,25 @@
               <li class="nav-item">
                 <a class="nav-link" routerLink="/tienda">Tienda</a>
               </li>
-              <li class="nav-item" *ngIf="!loggedIn">
-                <a class="nav-link" routerLink="/login">Iniciar sesión</a>
-              </li>
-              
-              <li class="nav-item" *ngIf="!loggedIn">
-                <a class="nav-link" routerLink="/register">Registrarse</a> <!--/registro-->
-              </li>
-              
-              <li class="nav-item dropdown" *ngIf="loggedIn">
+
+
+              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Cuenta
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" routerLink="/perfil" routerLinkActive="active">Perfil</a></li>
-                  <li><a class="dropdown-item" routerLink="/configuracion" routerLinkActive="active">Configuración</a></li>
-                  <li><a class="dropdown-item" routerLink="/cerrarSesion" (click)="logout()">Cerrar sesión</a></li>
+                  <ng-container *ngIf="loggedIn">
+                    <li><a class="dropdown-item" routerLink="/perfil" routerLinkActive="active">Perfil</a></li>
+                    <li><a class="dropdown-item" routerLink="/configuracion" routerLinkActive="active">Configuración</a></li>
+                    <li><a class="dropdown-item" routerLink="/cerrarSesion" (click)="logout()">Cerrar sesión</a></li>
+                  </ng-container>
+                  <ng-container *ngIf="!loggedIn">
+                    <li><a class="dropdown-item" routerLink="/login">Iniciar sesión</a></li>
+                    <li><a class="dropdown-item" routerLink="/register">Registrarse</a></li>
+                  </ng-container>
                 </ul>
               </li>
-
-
-
+              
             </ul>
           </div>
         </div>
