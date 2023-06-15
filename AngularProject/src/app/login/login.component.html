@@ -1,3 +1,101 @@
+<div class="container py-5 h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-12 col-lg-9 col-xl-7">
+      <div
+        class="card shadow-2-strong card-registration"
+        style="border-radius: 15px"
+      >
+        <div class="card-body p-4 p-md-5">
+          
+          <h4 class="mb-4 pb-2 pb-md-0 mb-md-5 text-primary">
+            ¡Inicia Sesion!
+          </h4>
+          <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+            <div class="row">
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form-control"
+                />
+                <label class="form-label">Usuario </label>
+
+                <div
+                  class="alert alert-danger"
+                  [hidden]="username.valid || username.pristine"
+                >
+                  <span *ngIf="username?.errors?.['required']">
+                    El username es obligatorio
+                  </span>
+
+                  <!--   <span *ngIf="username?.errors?.['username invalido']">
+                Username Invalido
+              </span> !-->
+                </div>
+              </div>
+
+              <!-- Contraeseña input -->
+              <div class="form-outline mb-4">
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                />
+                <label class="form-label" for="form1Example2">Contraseña</label>
+
+                <div
+                  class="alert alert-danger"
+                  [hidden]="password.valid || password.pristine"
+                >
+                  <span *ngIf="password?.errors?.['required']">
+                    La Contreseña es obligatoria
+                  </span>
+
+                  <span *ngIf="password?.errors?.['minLength']">
+                    La Contraseña debe tener 5 caracteres minimos
+                  </span>
+                </div>
+              </div>
+
+              <!-- 2 columnas grid para que el checkbox y recuerdame queden en linea  -->
+              <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                  <!-- Checkbox -->
+                  <div class="form-check">
+                    <input class="form-check-input" id="box" type="checkbox" />
+                    <label class="form-check-label" for="box">
+                      Recuerdame
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col text-center">
+                  <!-- Anchor a Reset Password  -->
+                  <a href="#"> ¿Olvidaste la contraseña?</a>
+                </div>
+              </div>
+
+              <!-- Submit Boton -->
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                  [disabled]="formLogin.invalid"
+                >
+                  Iniciar Sesion
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <body>
     <div class="login-container">
         <h2>Login</h2>
@@ -17,3 +115,5 @@
           </form>
       </div>
 </body>
+
+-->

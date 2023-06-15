@@ -1,1 +1,212 @@
-<p>register works!</p>
+<div class="container py-5 h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-12 col-lg-9 col-xl-7">
+      <div
+        class="card shadow-2-strong card-registration"
+        style="border-radius: 15px"
+      >
+        <div class="card-body p-4 p-md-5">
+          <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 text-primary">¡Registrate!</h3>
+
+          <form [formGroup]="formRegister">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+
+                <!-- Input Usuario  -->
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="Usuario"
+                    formControlName="usuario"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="Usuario">Usuario</label>
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="usuario.valid || usuario.pristine"
+                  >
+                    <span *ngIf="usuario?.errors?.['required']">
+                      Un nombre de usuario es obligatorio
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input Contraseña  -->
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input
+                    type="password"
+                    id="Contraseña"
+                    formControlName="password"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="Contraseña">Contraseña</label>
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="password.valid || password.pristine"
+                  >
+                    <span *ngIf="password?.errors?.['required']">
+                      La Contreseña es obligatoria
+                    </span>
+
+                    <span *ngIf="password.errors?.['minLength']">
+                      La Contraseña debe tener 5 caracteres minimos
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Nombre  -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="Nombre"
+                    formControlName="nombre"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="Nombre">Nombre</label>
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="nombre.valid || nombre.pristine"
+                  >
+                    <span *ngIf="nombre?.errors?.['required']">
+                      Un nombre es obligatorio
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input Apellido  -->
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input
+                    type="text"
+                    id="Apellido"
+                    formControlName="apellido"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="Apellido">Apellido</label>
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="apellido.valid || apellido.pristine"
+                  >
+                    <span *ngIf="apellido?.errors?.['required']">
+                      Un apellido es obligatorio
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Cumpleaños  -->
+            <div class="row">
+              <div class="col-md-6 mb-4 d-flex align-items-center">
+                <div class="form-outline datepicker w-100">
+                  <input
+                    type="date"
+                    class="form-control form-control-lg"
+                    id="Cumpleaños"
+                    formControlName="birthdate"
+                  />
+                  <label for="Cumpleaños" class="form-label"
+                    >Fecha de Nacimiento</label
+                  >
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="birthdate.valid || birthdate.pristine"
+                  >
+                    <span *ngIf="birthdate?.errors?.['required']">
+                      Debe ingresar una fecha de Cumpleaños
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-4 pb-2">
+                <!-- Input Email  -->
+                <div class="form-outline">
+                  <input
+                    type="email"
+                    id="email"
+                    formControlName="email"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="email">Email</label>
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="email.valid || email.pristine"
+                  >
+                    <span *ngIf="email?.errors?.['required']">
+                      El email es obligatorio
+                    </span>
+
+                    <span *ngIf="email.errors?.['email']">
+                      Ingrese un email valido
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input Telefono -->
+              <div class="col-md-6 mb-4 pb-2">
+                <div class="form-outline">
+                  <input
+                    type="tel"
+                    id="Celular"
+                    formControlName="celular"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="Celular"
+                    >Numero de Celular</label
+                  >
+
+                  <div
+                    class="alert alert-danger"
+                    [hidden]="celular.valid || celular.pristine"
+                  >
+                    <span *ngIf="celular?.errors?.['required']">
+                      El numero de celular es obligatorio
+                    </span>
+
+                    <span *ngIf="celular.errors?.['minLength']">
+                      El numero de celular debe tener 11 caracteres minimos
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-2">
+              <p class="fw-bold text-secondary">
+                Al hacer click en Registrarte, aceptas las Condiciones, la
+                Política de privacidad y la Política de cookies. Es posible que
+                te enviemos notificaciones por SMS, que podrás desactivar cuando
+                quieras
+              </p>
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                [disabled]="formRegister.invalid"
+              >
+                Iniciar Sesion
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
