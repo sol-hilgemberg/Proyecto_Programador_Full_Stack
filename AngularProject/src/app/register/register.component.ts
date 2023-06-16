@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms';
+import { AutenticacionService } from '../services/autenticacion.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,11 @@ import { FormBuilder, Validators, FormControl } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  constructor(private formBuilder: FormBuilder) {
-
-  }
+  constructor(
+    private formBuilder: FormBuilder,
+    private autenticacion: AutenticacionService,
+    private router: Router
+  ) {}
 
   get usuario(){
     return this.formRegister.get('usuario') as FormControl;
@@ -50,8 +54,41 @@ export class RegisterComponent {
     'celular': ['', [Validators.required, Validators.minLength(11)]]
   });
 
-  onSubmit() {
-    console.log(this.formRegister.value)
+  register() {
+    const username = this.formRegister.value.usuario ?? '';
+    console.log(username);
+    const password = this.formRegister.value.password ?? '';
+    console.log(password);
+    const nombre = this.formRegister.value.nombre ?? '';
+    console.log(nombre);
+    const apellido = this.formRegister.value.apellido ?? '';
+    console.log(apellido);
+    const fechaNacimiento = this.formRegister.value.birthdate ?? '';
+    console.log(fechaNacimiento);
+    const email = this.formRegister.value.email ?? '';
+    console.log(email);
+  
+    this.autenticacion.register(username, password, nombre, apellido, fechaNacimiento, email).subscribe(
+      (result) => {
+        if (result) {
+          console.log('Usuario registrado con éxito');
+          this.router.navigate(['/navbar']).then(() =>
+            this.router.navigateByUrl('/inicio')
+          );
+        } else {
+          console.log('Error al registrar el usuario');
+        }
+      },
+      (error) => {
+        console.log('Error al registrar el usuario');
+      }
+    );
   }
 
+  onSubmit() {
+    console.log(this.formRegister.value);
+    if (this.formRegister.valid) {
+      this.register();
+    }
+  }
 }

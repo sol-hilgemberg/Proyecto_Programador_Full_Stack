@@ -195,15 +195,20 @@
                 te enviemos notificaciones por SMS, que podrás desactivar cuando
                 quieras
               </p>
-
+            </div>
+            
+            <div>
               <button
                 type="submit"
                 class="btn btn-primary btn-block"
                 [disabled]="formRegister.invalid"
+                (click)="onSubmit()"
               >
-                Iniciar Sesion
+                Registrarse
               </button>
             </div>
+            
+
           </form>
         </div>
       </div>

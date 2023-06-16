@@ -15,7 +15,10 @@ export class AutenticacionService {
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<boolean> {
-    const data = { usuario: username, contraseña: password };
+    const data = {
+      usuario: username,
+      contraseña: password 
+    };
     return this.http.post<any>(`${this.apiUrl}/login`, data)
       .pipe(
         map(response => {
@@ -50,6 +53,29 @@ export class AutenticacionService {
       );
   }
   */
+
+  register(username: string, password: string, nombre: string, apellido: string, fechaNacimiento: string, email: string): Observable<boolean> {
+    const data = {
+      usuario: username,
+      contraseña: password,
+      nombre: nombre,
+      apellido: apellido,
+      fechaNacimiento: fechaNacimiento,
+      email: email
+    };
+  
+    return this.http.post<any>(`${this.apiUrl}/register`, data).pipe(
+      map(response => {
+        if (response.message === 'Usuario registrado correctamente.') {
+          localStorage.setItem('currentUser', JSON.stringify(response.user));
+          return true;
+        } else {
+          return false;
+        }
+      })
+    );
+  }
+  
 
   logout(): void {
     localStorage.removeItem('currentUser');

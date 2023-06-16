@@ -61,6 +61,7 @@ export class LoginComponent {
   }
 
   onSubmit() {
+    console.log(this.formLogin.value);
     if (this.formLogin.valid) {
       this.username = this.formLogin.value.username ?? ''; // Ya que la asignacion puede ser string, null o undefined para solucionar esto agrego el operador coalescente nulo ??
       this.password = this.formLogin.value.password ?? ''; // el cual proporciona un valor predeterminado en caso de que el valor sea null o undefined. De esta manera
