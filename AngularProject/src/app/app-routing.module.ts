@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { RegisterComponent } from './register/register.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'membresia', component: MembresiaComponent},
   {path: 'navbar', component: NavbarComponent},
   {path: 'tienda', component: TiendaComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'perfil', component: PerfilComponent}
 ];
 
 @NgModule({
@@ -40,4 +42,5 @@ export const routingComponentes = [
   HomeComponent,
   PlanesComponent,
   RegisterComponent,
+  PerfilComponent
 ]

@@ -17,6 +17,7 @@ import { TiendaComponent} from './tienda/tienda.component';
 import { CardsShopComponent } from './tienda/cards-shop/cards-shop.component';
 import { CarritoComprasComponent } from './tienda/carrito-compras/carrito-compras.component';
 import { RegisterComponent } from './register/register.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'membresia', component: MembresiaComponent},
   {path: 'navbar', component: NavbarComponent },
   {path: 'tienda', component: TiendaComponent},
+  {path: 'perfil', component: PerfilComponent},
 ];
 
 @NgModule({
@@ -38,7 +40,8 @@ const routes: Routes = [
     LoginComponent,
     CardsShopComponent,
     CarritoComprasComponent,
-    RegisterComponent
+    RegisterComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

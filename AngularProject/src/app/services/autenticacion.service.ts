@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,8 @@ export class AutenticacionService {
         map(response => {
           if (response.message === 'Inicio de sesion con exito.') {
             // Las credenciales son validas, inicia sesión
-            localStorage.setItem('currentUser', JSON.stringify(response.user));
+            //localStorage.setItem('currentUser', JSON.stringify(response.user));
+            localStorage.setItem('currentUser', JSON.stringify(data.usuario));
             this.setLoggedIn(true);
             return true;
           } else {
@@ -75,8 +77,48 @@ export class AutenticacionService {
       })
     );
   }
-  
 
+  getCurrentUser(): Observable<any> {
+    const currentUser = localStorage.getItem('currentUser');
+    console.log("prueba", currentUser)
+    if (currentUser) {
+      try {
+        const user = JSON.parse(currentUser);
+        return this.http.get<any>(`${this.apiUrl}/users/${user}`).pipe(
+          map(response => {
+            return response;
+          }),
+          catchError(error => {
+            console.error('Error al obtener los datos del usuario:', error);
+            return of(null);
+          })
+        );
+      } catch (error) {
+        console.error('Error al analizar el JSON de currentUser:', error);
+        return of(null);
+      }
+    } else {
+      return of(null);
+    }
+  }
+
+  actualizarUsuario(usuario: string, campoActualizado: any): Observable<any> {
+    return this.http.patch<any>(`${this.apiUrl}/users/${usuario}/update/`, campoActualizado).pipe(
+      map(response => {
+        if (response.status === 200) {
+          return true; // Si la solicitud fue exitosa, devolvemos true
+        } else {
+          return false; // Si la solicitud no fue exitosa, devolvemos false
+        }
+      }),
+      catchError(error => {
+        console.error('Error al actualizar los datos del usuario:', error);
+        return of(false); 
+      })
+    );
+  }
+  
+  
   logout(): void {
     localStorage.removeItem('currentUser');
     this.setLoggedIn(false); // Establece loggedIn en false al cerrar sesión
