@@ -26,4 +26,15 @@
     transform: scale(1);
   }
 
+  @media (max-width: 992px) {
+    body {
+      font-size: 20%;
+    }
+  
+    .inicio, .about-contenedor, .contenedor {
+      display: block;
+      text-align: center;
+    }
+  }
+
  

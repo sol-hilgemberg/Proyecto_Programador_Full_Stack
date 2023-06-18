@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th score="col">#</th>
+            <th score="col">Producto</th>
+            <th score="col">Precio unidad</th>
+            <th score="col">Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos; let indice = index;">
+            <th scope="row">1</th>
+            <td> {{producto.nombre}} </td>
+            <td> {{producto.precio}}  </td>
+            <td> 15 </td>
+            <button type="button" class="btn btn-outline-danger" (click)="onClickBorrar(indice)">Borrar</button>
+    </tbody>
+</table>

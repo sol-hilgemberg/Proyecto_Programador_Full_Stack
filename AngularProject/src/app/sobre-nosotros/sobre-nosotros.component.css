@@ -71,5 +71,38 @@
     grid-column-gap: 50px;
     grid-row-gap: 0px;
   }
+  @media (max-width: 992px) {
+    body {
+      font-size: 20%;
+    }
+  
+    .inicio, .about-contenedor, .contenedor {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+  /* tablets / celulares */
+  @media (max-width: 768px) {
+    
+    .contenedor {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      }
+  }
+  
+  /* celulares */
+  @media (max-width: 576px) {
+    html {
+      font-size: 65%;
+    }
+    
+    .about-contenedor, .contenedor {
+      text-align: center;
+    }
+  } 
   
  

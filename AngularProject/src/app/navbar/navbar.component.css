@@ -37,7 +37,7 @@
 
 .navbar .navbar-brand {
   font-weight: bolder;
-  color: #fff;
+  color: #ffffff;
   font-size: 3rem;
   margin-left: 2%;
 }
@@ -65,7 +65,7 @@
 
 .navbar .navbar-nav .nav-link:hover {
   background: #FFFB00;
-  color: white;
+  color: #000000;
 }
 
 .navbar .dropdown-menu {
@@ -88,246 +88,6 @@
   color: #FFFB00;
 }
 
-.inicio {
-  background-image: url('../../assets/images/inicio.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: left;
-  width: 100%;
-  min-height: 90vh;
-  padding: 280px 0 220px;
-}
-
-.inicio span, h3 {
-  color: white;
-  font-size: 5rem;
-  padding-left: 10%;
-}
-
-.inicio a {
-  margin-left: 10%;
-}
-
-.about {
-  background-color: #000;
-}
-
-.about-contenedor {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 0px;
-  }
-
-
-.about .image img {
-  width: 100%;
-  padding: 2rem;
-}
-
-.about .content span {
-  font-size: 2rem;
-  color: #FFFB00;
-}
-
-.about .content .title {
-  font-size: 4rem;
-  color: #fff;
-  margin-top: .5rem;
-}
-
-.about .content p {
-  font-size: 1.5rem;
-  color: #aaa;
-  padding: 1rem 0;
-  line-height: 2;
-}
-
-.about .content .contenedor .caja h3 {
-  font-size: 2rem;
-  color: #fff;
-}
-
-.about .content .contenedor .caja h3 i {
-  padding-right: 1.5rem;
-  color: #FFFB00;
-}
-
-.contenedor {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 0px;
-}
-
-.planes {
-  background-color: #000;
-}
-
-.planes .contenedor .caja:hover .image img {
-  transform: scale(1.1);
-}
-
-.planes .contenedor .caja .image {
-  height: 30rem;
-  width: 100%;
-  overflow: hidden;
-}
-
-.planes .contenedor .caja .image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.planes .contenedor .caja .content {
-  padding: 2rem;
-  text-align: center;
-}
-
-.planes .contenedor .caja .content img {
-  height: 9rem;
-  margin-bottom: 1rem;
-  filter: invert(1);
-}
-
-.planes .contenedor .caja .content h3 {
-  font-size: 2rem;
-  color: #FFFB00;
-}
-
-.planes .contenedor .caja .content p {
-  line-height: 2;
-  font-size: 1.5rem;
-  color: #aaa;
-  padding: 1rem 0;
-}
-
-.membresia {
-  background-color: #000;
-}
-
-.membresia .information span {
-  font-size: 2rem;
-  color: #FFFB00;
-}
-
-.membresia .information h3 {
-  font-size: 4rem;
-  padding-top: .5rem;
-  color: #fff;
-}
-
-.membresia .information p {
-  line-height: 2;
-  padding: 1rem 0;
-  font-size: 1.4rem;
-  color: #aaa;
-}
-
-.membresia .information p i {
-  padding-right: 1rem;
-  color: #FFFB00;
-}
-
-.membresia .plan {
-  text-align: center;
-  padding: 2rem;
-}
-
-.membresia .plan.basic {
-  background: linear-gradient(#111 100%, transparent 90%);
-}
-
-.membresia .plan.premium {
-  background: linear-gradient(#111 100%, transparent 90%);
-}
-
-.membresia .plan h3 {
-  font-size: 2.5rem;
-  margin: 1rem 0;
-  color: #fff;
-}
-
-.membresia .plan .price {
-  font-size: 5rem;
-  font-weight: bolder;
-  color: #FFFB00;
-}
-
-.membresia .plan .price span {
-  color: #fff;
-  font-size: 2rem;
-}
-
-.membresia .plan .list {
-  padding: 1rem 0;
-}
-
-.membresia .plan .list p {
-  line-height: 2;
-  padding: 1rem 0;
-  font-size: 1.4rem;
-  color: #aaa;
-}
-
-.membresia .plan .list p i {
-  padding-right: 1rem;
-  color: #FFFB00;
-}
-
-.footer {
-  background-color: #000;
-}
-
-.footer h3 {
-  font-size: 2rem;
-  color: #FFFB00;
-  padding-bottom: 1rem;
-}
-
-.footer .contenedor .caja h3 {
-  font-size: 2.2rem;
-  color: #fff;
-  padding: 1rem 0;
-}
-
-.footer .contenedor .caja .links {
-  font-size: 1.5rem;
-  display: block;
-  color: #aaa;
-  padding: 1rem 0;
-}
-
-.footer .contenedor .caja .links:hover {
-  color: #FFFB00;
-}
-
-.footer .contenedor .caja p {
-  font-size: 1.5rem;
-  color: #aaa;
-  padding: 1rem 0;
-}
-
-.footer .contenedor .caja p i {
-  padding-right: .5rem;
-  color: #FFFB00;
-}
-
-.copyright {
-  position: absolute;
-  bottom: 0;
-  width: 100%;;
-  font-size: 2rem;
-  text-align: center;
-  padding: 2rem;
-  color: #fff;
-  background: #111;
-  line-height: 1.5;
-}
 
 @media (max-width: 992px) {
   body {
@@ -337,14 +97,6 @@
   .inicio, .about-contenedor, .contenedor {
     display: block;
     text-align: center;
-  }
-
-  .plan.basic {
-    margin: 1rem;
-  }
-
-  .plan.premium {
-    margin: 1rem;
   }
 }
 

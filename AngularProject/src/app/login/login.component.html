@@ -1,19 +1,72 @@
-<body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form (ngSubmit)="login()">
-            <div>
-              <label for="username">Username:</label>
-              <input type="text" id="username" name="username" [(ngModel)]="username" required>
-            </div>
-            <div>
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" [(ngModel)]="password" required>
-            </div>
-            <div>
-              <div *ngIf="loginError" class="error">Invalid username or password</div>
-              <button type="submit">Login</button>
+<div class="container py-5 h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-12 col-lg-9 col-xl-7">
+      <div class="card shadow-2-strong card-registration" style="border-radius: 15px">
+        <div class="card-body p-4 p-md-5">
+          <h4 class="mb-4 pb-2 pb-md-0 mb-md-5 text-primary">¡Inicia Sesión!</h4>
+          <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="text" formControlName="username" class="form-control" />
+                <label class="form-label">Usuario</label>
+
+                <div class="alert alert-danger" [hidden]="!formLogin.get('username')?.dirty || formLogin.get('username')?.valid">
+                  <span *ngIf="formLogin.get('username')?.errors?.['required']">
+                    El username es obligatorio
+                  </span>
+                </div>
+              </div>
+
+              <!-- Contraseña input -->
+              <div class="form-outline mb-4">
+                <input type="password" formControlName="password" class="form-control" />
+                <label class="form-label">Contraseña</label>
+
+                <div class="alert alert-danger" [hidden]="!formLogin.get('password')?.dirty || formLogin.get('password')?.valid">
+                  <span *ngIf="formLogin.get('password')?.errors?.['required']">
+                    La contraseña es obligatoria
+                  </span>
+                  <span *ngIf="formLogin.get('password')?.errors?.['minlength']">
+                    La contraseña debe tener al menos 5 caracteres
+                  </span>
+                </div>
+              </div>
+
+              <!-- Error message -->
+              <div *ngIf="loginError" class="alert alert-danger mb-4">
+                Usuario o contraseña inválidos
+              </div>
+
+              <!-- Remember me and forgot password -->
+              <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                  <div class="form-check">
+                    <input class="form-check-input" id="box" type="checkbox" />
+                    <label class="form-check-label" for="box">
+                      Recuérdame
+                    </label>
+                  </div>
+                </div>
+                <div class="col text-center">
+                  <a href="#">¿Olvidaste la contraseña?</a>
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block"
+                  [disabled]="formLogin.invalid"
+                >
+                  Iniciar Sesión
+                </button>
+              </div>
             </div>
           </form>
+        </div>
       </div>
-</body>
+    </div>
+  </div>
+</div>

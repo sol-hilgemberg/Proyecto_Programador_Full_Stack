@@ -47,9 +47,17 @@
   .membresia .plan.basic {
     background: linear-gradient(#111 100%, transparent 90%);
   }
+
+  .membresia .plan.plan.basic:hover {
+    transform: scale(1.03); /* Aumenta el tamaño en un 3% */
+  }
   
   .membresia .plan.premium {
     background: linear-gradient(#111 100%, transparent 90%);
+  }
+
+  .membresia .plan.plan.premium:hover {
+    transform: scale(1.03); /* Aumenta el tamaño en un 3% */
   }
   
   .membresia .plan h3 {
@@ -84,3 +92,19 @@
     padding-right: 1rem;
     color: #FFFB00;
   }
+
+
+  @media (max-width: 992px) {
+    body {
+      font-size: 20%;
+    }
+  
+    .plan.basic {
+      margin: 1rem;
+    }
+  
+    .plan.premium {
+      margin: 1rem;
+    }
+  }
+  

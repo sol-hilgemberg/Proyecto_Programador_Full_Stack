@@ -10,9 +10,14 @@ body {
 
 }
 
-.copyright {
+.footer {
+  background-color: #000;
+}
 
-  margin-top: auto;
+.copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   font-size: 2rem;
   text-align: center;
   padding: 2rem;
