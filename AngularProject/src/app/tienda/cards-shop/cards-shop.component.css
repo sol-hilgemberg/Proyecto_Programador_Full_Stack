@@ -1,0 +1,30 @@
+.texto {
+    color: white;
+    font-size: 3em;
+}
+
+.card-titulo {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.precio {
+    color: yellow; 
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 4em;
+}
+
+.card {
+    background: linear-gradient(#111 100%, transparent 90%);
+    margin: 2rem;
+}
+
+.botonCard {
+    display: grid;
+    margin: auto;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2em;
+}

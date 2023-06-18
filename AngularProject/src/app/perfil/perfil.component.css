@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import '../footer/footer.component.css';
+
+.shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .profile-tab-nav {
+    min-width: 250px;
+  }
+  
+  .tab-content {
+    flex: 1;
+    padding: 4rem 5rem !important;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 1.2rem;
+  }
+
+  .form-group input[type="text"] {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  }
+
+  .avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .avatar-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .avatar-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .avatar-buttons button {
+    margin-top: 5px;
+  }
+  
+  .input-file {
+    display: none;
+  }
+
+  .usuario {
+    margin-top: 18px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+  }
+  
+  .button-container button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  

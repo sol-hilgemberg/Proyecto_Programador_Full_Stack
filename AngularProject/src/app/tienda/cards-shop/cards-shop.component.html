@@ -1,0 +1,15 @@
+<div *ngFor="let producto of Productos" class="card mb-3 rounded-2" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="assets/images/{{producto.imagen}}" class="img-fluid rounded-start" [alt]="producto.alt">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-titulo">{{producto.nombre}}</h5>
+        <p class="card-text texto"> {{producto.descripcion}} </p>
+        <p class="card-text precio">$ {{producto.precio}} </p>
+      </div>
+      <button type="button" class="btn btn-outline-warning botonCard" (click)="onClick(producto)">Añadir al carrito</button>
+    </div>
+  </div>
+</div>
