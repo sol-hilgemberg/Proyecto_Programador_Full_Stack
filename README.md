@@ -8,7 +8,4 @@ Objetivo principal del proyecto:
 
 Nombre del proyecto: SmartFIT 
 
-
-
-
-
+![SmartFIT](https://github.com/sol-hilgemberg/Proyecto_Programador_Full_Stack/assets/94760740/0da8643b-8ce2-423c-a366-580cacde89c9)
